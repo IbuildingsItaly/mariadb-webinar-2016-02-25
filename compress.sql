@@ -32,7 +32,7 @@ INSERT INTO t_uncompressed (a, b, c)
         Populate a compressed table and check size
 */
 
-SET GLOBAL innodb_compression_algorithm = 'zlib';
+SET GLOBAL innodb_compression_algorithm = 'lzma';
 SET GLOBAL innodb_compression_level = 6;
 
 CREATE /*M!100000 OR REPLACE */ TABLE t_compressed (
